@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<!-- charset="utf-8" sorgt dafür das verschiedenste Sonderzeichen ohne Probleme oder Umwege genutzt werden können -->
+    <meta charset="utf-8">
+<!-- viewport content scaling ermittelt die Auflösung des genutzten Bildschirmed und skaliert die Inhalte entsprechend -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--Title steht im Browser Tab -->
+    <title>URI-Rechner</title>
+
+<!-- Script outsource vorbereitet <script src="script.js"></script> -->
+    <script>
+
+    function rechnerU()
+{
+    var r1 = parseInt (document.getElementById("inputR1").value);
+    var i1 = parseInt (document.getElementById("inputI1").value);
+
+    document.getElementById("outputU").value = r1 * i1;
+}
+
+function rechnerI()
+{
+    var r2 = parseInt (document.getElementById("inputR2").value);
+    var u2 = parseInt (document.getElementById("inputU2").value);
+
+    var i2 = (u2 / r2);
+    document.getElementById("outputI").innerHTML = (i2);
+}
+
+function rechnerR()
+{
+    var u3 = parseInt (document.getElementById("inputU3").value);
+    var i3 = parseInt (document.getElementById("inputI3").value);
+
+    var r3 = (u3 / i3);
+    document.getElementById("outputR").innerHTML = r3;
+}
+    function toggle(a)
+{
+    if (a==2) {
+    document.getElementById("formularU").style.display="none";
+    document.getElementById("formularI").style.display="block";
+    document.getElementById("formularR").style.display="none";
+    }
+    else if (a < 2) {
+    document.getElementById("formularU").style.display="block";
+    document.getElementById("formularI").style.display="none";
+    document.getElementById("formularR").style.display="none";
+    }
+    else {
+    document.getElementById("formularU").style.display="none";
+    document.getElementById("formularI").style.display="none";
+    document.getElementById("formularR").style.display="block";
+    }
+}
+    </script>
+
+<!-- CSS code mit verschiedenen Klassen welche genutzt werden können -->
+    <style type="text/css">
+    .body{
+        background-color: bisque;
+    }
+    .header {
+        font-size:1.5em;
+        color: black;
+        text-shadow: 2px 2px #D8D8D8;
+        text-align: center;
+    }
+    .header2 {
+        font-size:3.1em;
+        color: darkblue;
+        text-shadow: 3px 3px dimgrey;
+        text-align: center;
+    }
+    .form {
+        padding-top: 1em;
+        padding-bottom: 1em;
+        border: 2px double black;
+        display: none;
+    }
+    .bold {
+        text-decoration-line:underline;
+        font-size: 120%;
+        font-style: bold;
+    }
+    .padding1em {
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+    .paddingside{
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+    </style>
+
+</head>
+
+<!-- Eröffnung des body-Tags mit verwendung der CSS Klasse "body" -->
+<body class="body">
+
+<!-- Erste Überschrift mit Verwendung der CSS Klasse "header2" -->
+<h1 class="header2">URI - Rechner</h1>
+
+<!-- Erste untergeordnete Überschrift mit Verwendung der CSS Klasse "header" -->
+<a id="spannungHeader" title="Klicken um Spannung zu berechnen" class="header" href="NoJS.htm" onclick="toggle(1); return false;">Spannung errechnen</a>
+<form id="formularU" class="form" name="rechnerU">
+
+
+<!-- Verwendung des label-Tags um input Felder simpel zu beschriften -->
+    <label class="bold" for="inputR1">Widerstand</label>
+    <input id="inputR1" type="number" name="inputR1"/>
+<!-- input felder mit dem type "number"" damit nur Zahlen akzeptiert werden -->
+
+    <label class="bold" for="inputI1">Stromstärke</label>
+    <input id="inputI1" type="number" name="inputI1"/>
+
+<!-- Ein Button Element mit einer onclick funktion welche auf eine Javascript function verweist -->
+    <button type="button" onclick="rechnerU()">Rechnen</button>
+    <label class="bold" for="outputU">Spannung</label>
+    <input id="outputU" type="number" name="outputU"/>
+
+<!-- Ein Button mit dem type "reset" zum zurücksetzen des Formulars -->
+    <button type="reset">Reset</button>
+
+</form>
+
+</br>
+</br>
+
+<a id="stromHeader" title="Klicken um Stromstärke zu berechnen" class="header" href="NoJS.htm" onclick="toggle(2); return false;">Stromstärke errechnen</a>
+<form id="formularI" class="form" name="rechnerI">
+
+    <label class="bold" for="inputR2">Widerstand</label>
+    <input id="inputR2" type="number" name="inputR2"/>
+
+    <label class="bold" for="inputU2">Spannung</label>
+    <input id="inputU2" type="number" name="inputU2"/>
+
+    <button type="button" onclick="rechnerI()">Rechnen</button>
+    <label class="bold" for="outputI">Stromstärke</label>
+    <output id="outputI"></output>
+
+    <button type="reset">Reset</button>
+
+</form>
+
+</br>
+</br>
+
+<a id="widerstandHeader" title="Klicken um Widerstand zu berechnen" class="header" href="NoJS.htm" onclick="toggle(3); return false;">Widerstand errechnen</a>
+<form id="formularR" class="form" name="rechnerR">
+
+    <label class="bold" for="inputU3">Spannung</label>
+    <input type="number" name="inputU3"/>
+
+    <label class="bold" for="inputI3">Stromstärke</label>
+    <input type="number" name="inputI3"/>
+
+    <button type="button" onclick="rechnerR()">Rechnen</button>
+    <label class="bold" for="outputR">Widerstand</label>
+    <input id="outputR" type="number" name="outputR"/>
+
+    <button type="reset">Reset</button>
+
+</form>
+
+</br>
+</br>
+
+</body>
+
+<!-- Quellenangaben für verschiedene Hilfeseiten zu gewissen Elementen etc.
+Viewport: http://wiki.selfhtml.org/wiki/HTML/Kopfdaten/meta#Viewport_einstellen
+Script: http://wiki.selfhtml.org/wiki/Script
+Label: http://wiki.selfhtml.org/wiki/Label#label
+Button: http://wiki.selfhtml.org/wiki/Button
+CSS class: http://wiki.selfhtml.org/wiki/Class#class
+ -->
+</html>
