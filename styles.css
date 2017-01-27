@@ -1,0 +1,48 @@
+    .header {
+        font-size:1.5em;
+        color: black;
+        text-shadow: 2px 2px dimgrey;
+        text-align: center;
+    }
+    .form{
+        padding: 1em;
+        border-radius: 10px;
+        border: 3px solid #BADA55;
+    }
+    .formDIV{
+        padding-top: 2em;
+        padding-bottom: 2em;
+        display: none;
+    }
+    .table{
+        border-radius: 10px;
+        border: 3px solid #BADA55;
+        background-color: #FFFFFF;
+    }
+    .underline{
+        text-decoration: none;
+        border-bottom: 2px solid black;
+    }
+    .divPadding{
+        padding: 20px 10px;
+        float: left;
+    }
+    .floatClear{
+        clear: both;
+    }
+    .floatLeft{
+        padding: 0px 8px;
+        float: left;
+    }
+    .floatHeader{
+        font-size: 20pt;
+        padding: 0px 50px;
+        font-style: bold;
+        color: black;
+        float: left;
+    }
+    .big{
+        font-size: 18pt;
+        font-style: bold;
+        color: black;
+    }

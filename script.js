@@ -1,67 +1,51 @@
-//Es erfolgt keine Ausgabe!?
-
-//Spannung berechnen + Ausgabe der Lösung
-function rechnerU()
+function uRechner()
 {
-    var r1 = parseInt (document.rechnerU.inputR1.value);
-    var i1 = parseInt (document.rechnerU.inputI1.value);
+    var uWider = parseInt (document.getElementById("inputUr").value);
+    var uStrom = parseInt (document.getElementById("inputUi").value);
 
-    var u1 = (r1 * i1);
-    document.getElementById("outputU").innerHTML = u1;
+    document.getElementById("outputUu").value = uWider * uStrom;
 }
 
-//Stromstärke berechnen + Ausgabe der Lösung
-function rechnerI()
+function rRechner()
 {
-    var r2 = parseInt (document.rechnerI.inputR2.value);
-    var u2 = parseInt (document.rechnerI.inputU2.value);
+    var rSpann = parseInt (document.getElementById("inputRu").value);
+    var rStrom = parseInt (document.getElementById("inputRi").value);
 
-    var i2 = (u2 / r2);
-    document.getElementById("outputI").innerHTML = (i2);
+    document.getElementById("outputRr").value = rSpann / rStrom;
 }
 
-//Widerstand berechnen + Ausgabe der Lösung
-function rechnerR()
+function iRechner()
 {
-    var u3 = parseInt (document.rechnerR.inputU3.value);
-    var i3 = parseInt (document.rechnerR.inputI3.value);
+    var iSpann = parseInt (document.getElementById("inputIu").value);
+    var iWider = parseInt (document.getElementById("inputIr").value);
 
-    var r3 = (u3 / i3);
-    document.getElementById("outputR").innerHTML = r3;
+    document.getElementById("outputIi").value = iSpann / iWider;
 }
 
 
-
-//Rechnungen alle mit getElementById
-//Immernoch keine Ausgabe
-
-
-/*
-    function rechnerU()
+function toggle(a)
 {
-    var r1 = parseInt (document.getElementById("inputR1").value);
-    var i1 = parseInt (document.getElementById("inputI1").value);
 
-    var u1 = (r1 * i1);
-    document.getElementById("outputU").innerHTML = u1;
+if (a==1) {
+    document.getElementById("rechnerU").style.display="block";
+    document.getElementById("rechnerR").style.display="none";
+    document.getElementById("rechnerI").style.display="none";
+}
+else if (a==2) {
+    document.getElementById("rechnerU").style.display="none";
+    document.getElementById("rechnerR").style.display="block";
+    document.getElementById("rechnerI").style.display="none";
 }
 
-function rechnerI()
-{
-    var r2 = parseInt (document.getElementById("inputR2").value);
-    var u2 = parseInt (document.getElementById("inputU2").value);
-
-    var i2 = (u2 / r2);
-    document.getElementById("outputI").innerHTML = (i2);
+else if (a==3) {
+    document.getElementById("rechnerU").style.display="none";
+    document.getElementById("rechnerR").style.display="none";
+    document.getElementById("rechnerI").style.display="block";
 }
 
-function rechnerR()
-{
-    var u3 = parseInt (document.getElementById("inputU3").value);
-    var i3 = parseInt (document.getElementById("inputI3").value);
-
-    var r3 = (u3 / i3);
-    document.getElementById("outputR").innerHTML = r3;
+else {
+    document.getElementById("rechnerU").style.display="none";
+    document.getElementById("rechnerR").style.display="none";
+    document.getElementById("rechnerI").style.display="none";
 }
-
-*/
+}

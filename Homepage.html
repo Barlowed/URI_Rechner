@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>NewProject</title>
+
+    <script src="script.js">
+    </script>
+
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+<!-- table as topmenu -->
+<table cellpadding= 2 width=100%  class="table">
+    <tr> <td align=right>
+        <a title="NewProject" href="Homepage.html"><img class="floatLeft" height=30 width=25 src="images/logo.gif"/></a>
+        <font class="floatHeader underline"> NewProject - Homepage </font>
+        <a title="NewProject" href="Homepage.html"><img class="floatLeft" height=30 width=25 src="images/logo.gif"/></a>
+        <a title="Zurück zur Homepage" class="big" href="Homepage.html">Homepage</a>
+        <font color="B5B5B5"> &nbsp;|&nbsp; </font>
+        <a title="Kontakt & Impressum" class="big" href="Kontakt.html">Kontakt</a>
+        <font color="B5B5B5"> &nbsp;|&nbsp; </font>
+        <a title="Zu meinen repositories" class="big" target="_blank" href="https://github.com/Barlowed?tab=repositories">Mein Github</a>
+    </td></tr>
+</table>
+<br><br>
+
+<!-- open new div -->
+<div>
+
+<div class="divPadding"><button type="button" onclick="toggle(1)">Spannung berechnen</button></div>
+
+<div class="divPadding"><button type="button" onclick="toggle(2)">Widerstand berechnen</button></div>
+
+<div class="divPadding"><button type="button" onclick="toggle(3)">Stromstärke berechnen</button></div>
+
+<div class="divPadding"><button type="button" onclick="toggle(4)">Rechner ausblenden</button></div>
+
+<div class="floatClear"></div>
+
+</div>
+<!-- end of div -->
+
+<form class="form" id="rechnerURI" name="rechnerURI">
+
+    <!-- open new div -->
+    <div class="formDIV" id="rechnerU" name="rechnerU">
+
+    <span class="underline"><label for="inputUr">Widerstand&nbsp;:&nbsp;</label></span>
+    <input id="inputUr" type="number" name="inputUr"/>
+
+    <span class="underline"><label for="inputUi">Stromstärke&nbsp;:&nbsp;</label></span>
+    <input id="inputUi" type="number" name="inputUi"/>
+
+    <span class="underline"><label for="outputUu"> Spannung&nbsp;:&nbsp;</label></span>
+    <input id="outputUu" type="number" name="outputUu" readonly/>
+
+    <button type="button" onclick="uRechner()">Berechnen</button>
+
+    </div>
+    <!-- end of div -->
+
+    <!-- open new div -->
+    <div class="formDIV" id="rechnerR" name="rechnerR">
+
+    <span class="underline"><label for="inputRu">Spannung&nbsp;:&nbsp;</label></span>
+    <input id="inputRu" type="number" name="inputRu"/>
+
+    <span class="underline"><label for="inputRi">Stromstärke&nbsp;:&nbsp;</label></span>
+    <input id="inputRi" type="number" name="inputRi"/>
+
+    <span class="underline"><label for="outputRr"> Widerstand&nbsp;:&nbsp;</label></span>
+    <input id="outputRr" type="number" name="outputRr" readonly/>
+
+    <button type="button" onclick="rRechner()">Berechnen</button>
+
+    </div>
+    <!-- end of div -->
+
+    <!-- open new div -->
+    <div class="formDIV" id="rechnerI" name="rechnerI">
+
+    <span class="underline"><label for="inputIu">Spannung&nbsp;:&nbsp;</label></span>
+    <input id="inputIu" type="number" name="inputIu"/>
+
+    <span class="underline"><label for="inputIr">Widerstand&nbsp;:&nbsp;</label></span>
+    <input id="inputIr" type="number" name="inputIr"/>
+
+    <span class="underline"><label for="outputIi"> Stromstärke&nbsp;:&nbsp;</label></span>
+    <input id="outputIi" type="number" name="outputIi" readonly/>
+
+    <button type="button" onclick="iRechner()">Berechnen</button>
+
+    </div>
+    <!-- end of div -->
+
+</form>
+
+</body>
+
+</html>
