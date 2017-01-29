@@ -1,13 +1,37 @@
+    /* different text styles */
     .header {
         font-size:1.8em;
         color: black;
         text-shadow: 2px 2px lightgray;
         text-align: center;
     }
-    .form{
-        padding: 1em;
+    .underline{
+        text-decoration: none;
+        border-bottom: 2px solid black;
+    }
+    .bold{
+        font-style: bold;
+    }
+    .big{
+        font-size: 18pt;
+        font-style: bold;
+        color: black;
+    }
+    .paragraph{
+         word-break: break-all;
+         font-size:13pt;
+         color: black;
+    }
+
+
+
+    .border{
         border-radius: 10px;
         border: 3px solid #BADA55;
+    }
+    .form{
+        padding: 1em;
+
     }
     .formDIV{
         padding-top: 2em;
@@ -18,15 +42,13 @@
         border-radius: 10px;
         border: 3px solid #BADA55;
         background-color: #FFFFFF;
+        width: 99%;
+        position: fixed;
+
     }
-    .underline{
-        text-decoration: none;
-        border-bottom: 2px solid black;
-    }
-    .divPadding{
-        padding: 20px 10px;
-        float: left;
-    }
+
+
+    /* different floats */
     .floatClear{
         clear: both;
     }
@@ -35,7 +57,9 @@
         float: left;
     }
     .floatCenter{
-        float: center;
+       
+        position: relatvie;
+        padding: 1em;
     }
     .floatHeader{
         font-size: 20pt;
@@ -44,8 +68,58 @@
         color: black;
         float: left;
     }
-    .big{
-        font-size: 18pt;
-        font-style: bold;
-        color: black;
+
+
+    /* different floats for images */
+    .leftIMG{
+        padding: 50px 50px;
+        float: left;
     }
+    .rightIMG{
+        padding: 50px 50px;
+        float: right;
+    }
+    .centerIMG{
+        display: block;
+        margin: auto;
+        padding-top: 1em;
+        padding-bottom:1em;
+    }
+
+
+    /* different styles for unordered lists */
+        ul.circle{
+        list-style-type: circle;
+        list-style-position: inside;
+    }
+        ul.center{
+        padding: 5px;
+        width: 25%;
+        margin: 0 auto;
+    }
+
+
+    /* different styles for div */
+    .divPadding{
+        padding: 20px 10px;
+        float: left;
+    }
+    .divCenter{
+        width: 50%;
+        margin: 0 auto;
+        border-radius: 10px;
+        border: 3px solid #BADA55;
+        background-color: #FFFFFF;
+    }
+    .parent {
+        width: 100%;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    .child3 {
+        width: 33%;
+        display: inline-block;
+        vertical-align: middle;
+    }
+

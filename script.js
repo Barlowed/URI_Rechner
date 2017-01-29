@@ -53,7 +53,7 @@ else {
     document.getElementById("rechnerU").style.display="none";
     document.getElementById("rechnerR").style.display="none";
     document.getElementById("rechnerI").style.display="none";
-}
+  }
 }
 
 function randomlinks()
