@@ -1,211 +1,209 @@
-<!DOCTYPE html>
 <html>
 
-    <head>
+<head>
 
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <title>NewProject</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <script src="script.js">
-        </script>
+  <title>NewProject</title>
 
-        <link rel="stylesheet" href="styles.css">
+  <script src="script.js">
+  </script>
 
-    </head>
+  <link rel="stylesheet" href="styles.css">
 
-    <body bgcolor="#eeeeee">
+</head>
 
-        <!-- table as topmenu -->
-        <table cellpadding= 2 width=100%  class="table">
-            <tr> <td align=right>
-                <a title="NewProject" href="Homepage.html"><img class="floatLeft" height=30 width=25 src="images/logo.gif"/></a>
-                <font class="floatHeader bold"> NewProject - Homepage </font>
-                <a title="NewProject" href="Homepage.html"><img class="floatLeft" height=30 width=25 src="images/logo.gif"/></a>
-                <a title="Zurück zur Homepage" class="big" href="Homepage.html">Homepage</a>
-                <font color="B5B5B5"> &nbsp;|&nbsp; </font>
-                <a title="Kontakt & Impressum" class="big" href="Kontakt.html">Kontakt</a>
-                <font color="B5B5B5"> &nbsp;|&nbsp; </font>
-                <!-- <a title="Zu den Spielen" class="big" href="Games.html">Games</a>
+<body bgcolor="#eeeeee">
+
+  <!-- table as topmenu -->
+  <table cellpadding=2 width=100% class="table">
+    <tr>
+      <td align=right>
+        <a title="NewProject" href="Homepage.html"><img class="floatLeft" height=30 width=25 src="images/logo.gif" /></a>
+        <font class="floatHeader bold"> NewProject - Homepage </font>
+        <a title="NewProject" href="Homepage.html"><img class="floatLeft" height=30 width=25 src="images/logo.gif" /></a>
+        <a title="Zurück zur Homepage" class="big" href="Homepage.html">Homepage</a>
+        <font color="B5B5B5"> &nbsp;|&nbsp; </font>
+        <a title="Kontakt & Impressum" class="big" href="Kontakt.html">Kontakt</a>
+        <font color="B5B5B5"> &nbsp;|&nbsp; </font>
+        <!-- <a title="Zu den Spielen" class="big" href="Games.html">Games</a>
                 <font color="B5B5B5"> &nbsp;|&nbsp; </font>
                 -->
-                <a title="Zu meinen repositories" class="big" target="_blank" href="https://github.com/Barlowed?tab=repositories">Mein Github</a>
-            </td></tr>
-        </table>
+        <a title="Zu meinen repositories" class="big" target="_blank" href="https://github.com/Barlowed?tab=repositories">Mein Github</a>
+      </td>
+    </tr>
+  </table>
 
-        <br><br>
+  <br><br>
 
-        <!-- U, R & I calculator start -->
-        <h1 class="header">URI - Rechner</h1>
+  <!-- U, R & I calculator start -->
+  <h1 class="header">URI - Rechner</h1>
 
-        <!-- buttons parent div -->
-        <div>
+  <!-- buttons parent div -->
+  <div>
 
-            <div class="divPadding"><button type="button" onclick="toggle(1)">Spannung berechnen</button></div>
+    <div class="divPadding"><button type="button" onclick="toggle(1)">Spannung berechnen</button></div>
 
-            <div class="divPadding"><button type="button" onclick="toggle(2)">Widerstand berechnen</button></div>
+    <div class="divPadding"><button type="button" onclick="toggle(2)">Widerstand berechnen</button></div>
 
-            <div class="divPadding"><button type="button" onclick="toggle(3)">Stromstärke berechnen</button></div>
+    <div class="divPadding"><button type="button" onclick="toggle(3)">Stromstärke berechnen</button></div>
 
-            <div class="divPadding"><button type="button" onclick="toggle(4)">Alle Rechner einblenden</button></div>
+    <div class="divPadding"><button type="button" onclick="toggle(4)">Alle Rechner einblenden</button></div>
 
-            <div class="divPadding"><button type="button" onclick="toggle(5)">Rechner ausblenden</button></div>
+    <div class="divPadding"><button type="button" onclick="toggle(5)">Rechner ausblenden</button></div>
 
-            <div class="floatClear"></div>
+    <div class="floatClear"></div>
 
-        </div>
-        <!-- end of div -->
+  </div>
+  <!-- end of div -->
 
-        <!-- U, R & I calculator -->
-        <form class="form border" id="rechnerURI" name="rechnerURI">
+  <!-- U, R & I calculator -->
+  <form class="form border" id="rechnerURI" name="rechnerURI">
 
-            <!-- open new div -->
-            <div class="formDIV" id="rechnerU" name="rechnerU">
+    <!-- open new div -->
+    <div class="formDIV" id="rechnerU" name="rechnerU">
 
-            <span class="underline"><label for="inputUr">Widerstand&nbsp;:&nbsp;</label></span>
-            <input id="inputUr" type="number" placeholder="Geben sie einen Wert ein" name="inputUr"/>
+      <span class="underline"><label for="inputUr">Widerstand&nbsp;:&nbsp;</label></span>
+      <input id="inputUr" type="number" placeholder="Geben sie einen Wert ein" name="inputUr" />
 
-            <span class="underline"><label for="inputUi">Stromstärke&nbsp;:&nbsp;</label></span>
-            <input id="inputUi" type="number" placeholder="Geben sie einen Wert ein" name="inputUi"/>
+      <span class="underline"><label for="inputUi">Stromstärke&nbsp;:&nbsp;</label></span>
+      <input id="inputUi" type="number" placeholder="Geben sie einen Wert ein" name="inputUi" />
 
-            <span class="underline"><label for="outputUu"> Spannung&nbsp;:&nbsp;</label></span>
-            <input id="outputUu" type="number" placeholder="Ergebnis" name="outputUu" readonly/>
+      <span class="underline"><label for="outputUu"> Spannung&nbsp;:&nbsp;</label></span>
+      <input id="outputUu" type="number" placeholder="Ergebnis" name="outputUu" readonly/>
 
-            <button type="button" onclick="uRechner()">Berechnen</button>
+      <button type="button" onclick="uRechner()">Berechnen</button>
 
-            </div>
-            <!-- end of div -->
+    </div>
+    <!-- end of div -->
 
-            <!-- open new div -->
-            <div class="formDIV" id="rechnerR" name="rechnerR">
+    <!-- open new div -->
+    <div class="formDIV" id="rechnerR" name="rechnerR">
 
-            <span class="underline"><label for="inputRu">Spannung&nbsp;:&nbsp;</label></span>
-            <input id="inputRu" type="number" placeholder="Geben sie einen Wert ein" name="inputRu"/>
+      <span class="underline"><label for="inputRu">Spannung&nbsp;:&nbsp;</label></span>
+      <input id="inputRu" type="number" placeholder="Geben sie einen Wert ein" name="inputRu" />
 
-            <span class="underline"><label for="inputRi">Stromstärke&nbsp;:&nbsp;</label></span>
-            <input id="inputRi" type="number" placeholder="Geben sie einen Wert ein" name="inputRi"/>
+      <span class="underline"><label for="inputRi">Stromstärke&nbsp;:&nbsp;</label></span>
+      <input id="inputRi" type="number" placeholder="Geben sie einen Wert ein" name="inputRi" />
 
-            <span class="underline"><label for="outputRr"> Widerstand&nbsp;:&nbsp;</label></span>
-            <input id="outputRr" type="number" placeholder="Ergebnis" name="outputRr" readonly/>
+      <span class="underline"><label for="outputRr"> Widerstand&nbsp;:&nbsp;</label></span>
+      <input id="outputRr" type="number" placeholder="Ergebnis" name="outputRr" readonly/>
 
-            <button type="button" onclick="rRechner()">Berechnen</button>
+      <button type="button" onclick="rRechner()">Berechnen</button>
 
-            </div>
-            <!-- end of div -->
+    </div>
+    <!-- end of div -->
 
-            <!-- open new div -->
-            <div class="formDIV" id="rechnerI" name="rechnerI">
+    <!-- open new div -->
+    <div class="formDIV" id="rechnerI" name="rechnerI">
 
-            <span class="underline"><label for="inputIu">Spannung&nbsp;:&nbsp;</label></span>
-            <input id="inputIu" type="number" placeholder="Geben sie einen Wert ein" name="inputIu"/>
+      <span class="underline"><label for="inputIu">Spannung&nbsp;:&nbsp;</label></span>
+      <input id="inputIu" type="number" placeholder="Geben sie einen Wert ein" name="inputIu" />
 
-            <span class="underline"><label for="inputIr">Widerstand&nbsp;:&nbsp;</label></span>
-            <input id="inputIr" type="number" placeholder="Geben sie einen Wert ein" name="inputIr"/>
+      <span class="underline"><label for="inputIr">Widerstand&nbsp;:&nbsp;</label></span>
+      <input id="inputIr" type="number" placeholder="Geben sie einen Wert ein" name="inputIr" />
 
-            <span class="underline"><label for="outputIi"> Stromstärke&nbsp;:&nbsp;</label></span>
-            <input id="outputIi" type="number" placeholder="Ergebnis" name="outputIi" readonly/>
+      <span class="underline"><label for="outputIi"> Stromstärke&nbsp;:&nbsp;</label></span>
+      <input id="outputIi" type="number" placeholder="Ergebnis" name="outputIi" readonly/>
 
-            <button type="button" onclick="iRechner()">Berechnen</button>
+      <button type="button" onclick="iRechner()">Berechnen</button>
 
-            </div>
-            <!-- end of div -->
+    </div>
+    <!-- end of div -->
 
-        </form>
+  </form>
 
 
-        <h1 class="header">Video zum Thema CSS-Positioning</h1>
+  <h1 class="header">Video zum Thema CSS-Positioning</h1>
 
-        <!-- video and paragraph -->
-        <div class="divPadding">
-            <span>
+  <!-- video and paragraph -->
+  <div class="divPadding">
+    <span>
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/6o-J6We3hkQ" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowfullscreen></iframe>
             </span>
-            <span class="divPadding">
+    <span class="divPadding">
                 <p> 
-                    <span class="underline big">Auszug aus wiki.selfhtml:</span>   </br>
-                    <span class="paragraph">
+                    <span class="underline big">Auszug aus wiki.selfhtml:</span> </br>
+    <span class="paragraph">
                     <i>Elemente können durch Verwendung der Eigenschaft            </br>
                     position aus dem normalen Elementfluss entfernt                </br>
                     werden und an jede beliebige Stelle des Viewports              </br>
                     positioniert werden. Auf andere Elemente haben                 </br>
                     positionierte Elemente keinen Einfluss.</i></span>
-                </p>
-                <label for="Quelle">Quelle:</label>
-                <a id="Quelle" name="Quelle" href="http://wiki.selfhtml.org/wiki/CSS/Eigenschaften/Positionierung/position" alt="wiki.selfhtml.org" title="selfthml.org" target="_blank" style="font-size:9pt; color: black;">http://wiki.selfhtml.org/wiki/CSS/Eigenschaften/Positionierung/position</a>
-            </span>
-        </div>
-        <div class="floatClear"></div>
+    </p>
+    <label for="Quelle">Quelle:</label>
+    <a id="Quelle" name="Quelle" href="http://wiki.selfhtml.org/wiki/CSS/Eigenschaften/Positionierung/position" alt="wiki.selfhtml.org" title="selfthml.org" target="_blank" style="font-size:9pt; color: black;">http://wiki.selfhtml.org/wiki/CSS/Eigenschaften/Positionierung/position</a>
+    </span>
+  </div>
+  <div class="floatClear"></div>
 
 
-        <!-- sources for learning material -->
-        <h1 class="header"> Hilfsmaterial </h1>
+  <!-- sources for learning material -->
+  <h1 class="header"> Hilfsmaterial </h1>
 
-        <!-- sources parent div -->
-        <div class="parent border">
+  <!-- sources parent div -->
+  <div class="parent border">
 
-            <!-- open new div -->
-            <div class="child3">
+    <!-- open new div -->
+    <div class="child3">
 
-                <div>
-                    <img class="centerIMG" src="https://www.w3.org/html/logo/downloads/HTML5_Logo_512.png" alt="HTML5 logo" style="width:128px;height:128px;">
-                </div>
+      <div>
+        <img class="centerIMG" src="https://www.w3.org/html/logo/downloads/HTML5_Logo_512.png" alt="HTML5 logo" style="width:128px;height:128px;">
+      </div>
 
-                <div>
-                    <ul class="circle center">
-                    <li><a href="http://www.w3schools.com/">www.w3schools.com</a></li>
-                    <li><a href="http://wiki.selfhtml.org/wiki/Startseite">wiki.selfhtml.org</a></li>
-                </div>
+      <div>
+        <ul class="circle center">
+          <li><a href="http://www.w3schools.com/">www.w3schools.com</a></li>
+          <li><a href="http://wiki.selfhtml.org/wiki/Startseite">wiki.selfhtml.org</a></li>
+      </div>
 
-                <div class="floatClear"></div>
-            </div>
-            <!-- end of div -->
-
-
-            <!-- open CSS3 div -->
-            <div class="child3">
-
-                <div>
-                    <img class="centerIMG" src="http://connexo.de/img/logos/CSS3_Logo.png" alt="CSS3 logo" style="width:95px;height:128px;">
-                </div>
-
-                <div>
-                    <ul class="circle center">
-                        <li><a href="http://www.w3schools.com/">www.w3schools.com</a></li>
-                        <li><a href="http://wiki.selfhtml.org/wiki/CSS">wiki.selfhtml.org</a></li>
-                        <li><a href="https://www.impressivewebs.com/">impressivewebs.com</a></li>
-                    </ul>
-                </div>
-
-            </div>
-            <!-- end of div -->
+      <div class="floatClear"></div>
+    </div>
+    <!-- end of div -->
 
 
-            <!-- open new div -->
-            <div class="child3">
+    <!-- open CSS3 div -->
+    <div class="child3">
 
-                <div>
-                <img class="centerIMG" src="http://i.imgur.com/8MdfnHI.png" alt="JS logo" style="width:95px;height:128px;">
-                </div>
+      <div>
+        <img class="centerIMG" src="http://connexo.de/img/logos/CSS3_Logo.png" alt="CSS3 logo" style="width:95px;height:128px;">
+      </div>
 
-                <div>
-                    <ul class="circle center">
-                        <li><a href="http://www.w3schools.com/">www.w3schools.com</a></li>
-                        <li><a href="http://wiki.selfhtml.org/wiki/CSS">wiki.selfhtml.org</a></li>
-                    </ul>
-                </div>
+      <div>
+        <ul class="circle center">
+          <li><a href="http://www.w3schools.com/">www.w3schools.com</a></li>
+          <li><a href="http://wiki.selfhtml.org/wiki/CSS">wiki.selfhtml.org</a></li>
+          <li><a href="https://www.impressivewebs.com/">impressivewebs.com</a></li>
+        </ul>
+      </div>
 
-            </div>
-            <!-- end of div -->
-
-            <div class="floatClear"></div>
-        </div>
-        <!-- sources parent div end -->
+    </div>
+    <!-- end of div -->
 
 
+    <!-- open new div -->
+    <div class="child3">
+
+      <div>
+        <img class="centerIMG" src="http://i.imgur.com/8MdfnHI.png" alt="JS logo" style="width:95px;height:128px;">
+      </div>
+
+      <div>
+        <ul class="circle center">
+          <li><a href="http://www.w3schools.com/">www.w3schools.com</a></li>
+          <li><a href="http://wiki.selfhtml.org/wiki/CSS">wiki.selfhtml.org</a></li>
+        </ul>
+      </div>
+
+    </div>
+    <!-- end of div -->
+
+    <div class="floatClear"></div>
+  </div>
+  <!-- sources parent div end -->
 
 
-
-    </body>
+</body>
 
 </html>

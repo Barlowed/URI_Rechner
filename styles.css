@@ -1,124 +1,256 @@
-    /* different text styles */
-    .header {
-        font-size:1.8em;
-        color: black;
-        text-shadow: 2px 2px lightgray;
-        text-align: center;
-    }
-    .underline{
-        text-decoration: none;
-        border-bottom: 2px solid black;
-    }
-    .bold{
-        font-style: bold;
-    }
-    .big{
-        font-size: 18pt;
-        font-style: bold;
-        color: black;
-    }
-    .paragraph{
-         word-break: break-all;
-         font-size:13pt;
-         color: black;
-    }
+/* ~~~~~~~~~~~~~ LANDING PAGE STYLING ~~~~~~~~~~~~~ */
+
+.html {
+  background: url(http://i.imgur.com/QCNmQ61.jpg) no-repeat center center fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+.title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  font-family: Tahoma, Helvetica, Arial, sans-serif;
+  text-align: center;
+  text-shadow: 2px 2px black;
+  color: rgb(230, 230, 230);
+}
+
+.title h1,
+.title h2 {
+  font-weight: normal;
+}
+
+.title h1 {
+  font-size: 42px;
+  font-weight: bold;
+}
+
+.title h2 {
+  font-size: 24px;
+}
 
 
-    /* Styles for big elements */
-    .border{
-        border-radius: 10px;
-        border: 3px solid #BADA55;
-    }
-    .form{
-        padding: 1em;
 
-    }
-    .formDIV{
-        padding-top: 2em;
-        padding-bottom: 2em;
-        display: none;
-    }
-    .table{
-        border-radius: 10px;
-        border: 3px solid #BADA55;
-        background-color: #FFFFFF;
-        width: 99%;
-        position: fixed;
-    }
+.content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: rgba(60, 60, 60, 0.98);
+  color: rgb(255, 255, 255);
+  font-family: Tahoma, Helvetica, Arial, sans-serif;
+}
 
-
-    /* different floats */
-    .floatClear{
-        clear: both;
-    }
-    .floatLeft{
-        padding: 0px 8px;
-        float: left;
-    }
-    .floatCenter{
-       
-        position: relatvie;
-        padding: 1em;
-    }
-    .floatHeader{
-        font-size: 20pt;
-        padding: 0px 50px;
-        font-style: bold;
-        color: black;
-        float: left;
-    }
+.inner {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 45px;
+  padding-bottom: 45px;
+  line-height: 130%;
+  word-wrap: normal;
+  font-size: 13px;
+}
 
 
-    /* different floats for images */
-    .leftIMG{
-        padding: 50px 50px;
-        float: left;
-    }
-    .rightIMG{
-        padding: 50px 50px;
-        float: right;
-    }
-    .centerIMG{
-        display: block;
-        margin: auto;
-        padding-top: 1em;
-        padding-bottom:1em;
-    }
+/* ~~~~~~~~~~~~~ Button styling ~~~~~~~~~~~~~ */
+
+.button {
+  background-color: white;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s;
+  /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: rgba(250, 250, 250, 0.4);
+  color: black;
+  border: 2px solid rgba(120, 120, 120, 0.9);
+}
+
+.button1:hover {
+  background-color: rgba(120, 120, 120, 0.9);
+  color: white;
+}
+
+.buttondisabled {
+  cursor: not-allowed;
+  opacity: 0.2;
+}
 
 
-    /* different styles for unordered lists */
-        ul.circle{
-        list-style-type: circle;
-        list-style-position: inside;
-    }
-        ul.center{
-        padding: 5px;
-        width: 25%;
-        margin: 0 auto;
-    }
+/* ~~~~~~~~~~~~~ different text styles ~~~~~~~~~~~~~ */
+
+.header {
+  font-size: 25px;
+  text-align: center;
+}
+
+.blackHeader {
+  font-size: 30px;
+  color: black;
+  text-align: center;
+}
+.whiteHeader {
+  font-size: 32px;
+  color: white;
+  text-align: center;
+}
+.underline {
+  text-decoration: none;
+  border-bottom: 2px solid black;
+}
+
+.bold {
+  font-style: bold;
+}
+
+.big {
+  font-size: 18pt;
+  font-style: bold;
+  color: black;
+}
+
+.paragraph {
+  word-break: break-all;
+  font-size: 13pt;
+  color: black;
+}
 
 
-    /* different styles for div verschachtelung */
-    .divPadding{
-        padding: 20px 10px;
-        float: left;
-    }
-    .divCenter{
-        width: 50%;
-        margin: 0 auto;
-        border-radius: 10px;
-        border: 3px solid #BADA55;
-        background-color: #FFFFFF;
-    }
-    .parent {
-        width: 100%;
-        text-align: center;
-        white-space: nowrap;
-        overflow: hidden;
-    }
-    .child3 {
-        width: 33%;
-        display: inline-block;
-        vertical-align: middle;
-    }
+/* ~~~~~~~~~~~~~ Styles for big elements ~~~~~~~~~~~~~ */
 
+.border {
+  border-radius: 10px;
+  border: 3px solid darkgrey;
+  background-color: rgba(200, 200, 200, 1);
+}
+
+.form {
+  padding: 1em;
+}
+
+.formDIV {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  display: block;
+}
+
+.table {
+  border-radius: 10px;
+  border: 3px solid #BADA55;
+  background-color: #FFFFFF;
+  width: 99%;
+  position: fixed;
+}
+
+
+/* ~~~~~~~~~~~~~ different floats ~~~~~~~~~~~~~ */
+
+.floatClear {
+  clear: both;
+}
+
+.floatLeft {
+  padding: 0px 8px;
+  float: left;
+}
+
+.floatCenter {
+  position: relatvie;
+  top: 5px;
+  left: 10%;
+  bottom: 99%;
+}
+
+.floatHeader {
+  font-size: 20pt;
+  padding: 0px 50px;
+  font-style: bold;
+  color: black;
+  float: left;
+}
+
+
+/* ~~~~~~~~~~~~~ different floats for images ~~~~~~~~~~~~~ */
+
+.leftIMG {
+  padding: 50px 50px;
+  float: left;
+}
+
+.rightIMG {
+  padding: 50px 50px;
+  float: right;
+}
+
+.centerIMG {
+  display: block;
+  margin: auto;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+
+/* ~~~~~~~~~~~~~ different styles for unordered lists ~~~~~~~~~~~~~ */
+
+ul.circle {
+  list-style-type: circle;
+  list-style-position: inside;
+}
+
+ul.center {
+  padding: 5px;
+  width: 25%;
+  margin: 0 auto;
+}
+
+
+/* ~~~~~~~~~~~~~ different styles for div verschachtelung ~~~~~~~~~~~~~ */
+
+.divPadding {
+  padding: 20px 10px;
+  float: left;
+}
+
+.divCenter {
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 10px;
+  border: 3px solid #BADA55;
+  background-color: #FFFFFF;
+}
+
+.parent {
+  width: 100%;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.child3 {
+  width: 33%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.child5 {
+  display: inlineblock;
+  vertical-align: middle;
+}

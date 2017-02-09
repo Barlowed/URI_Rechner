@@ -1,0 +1,132 @@
+<html>
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>NewProject</title>
+
+        <script src="script.js">
+        </script>
+
+        <link rel="stylesheet" href="styles.css">
+
+    </head>
+ 
+    <body background="http://i.imgur.com/nMXzKgh.jpg" style="background-size: cover;">
+    
+
+        <div class="parent">
+        <a href="LandingPage.html"><button class="button button1 child5">Homepage</button></a>
+        <a href="Rechner.html"><button class="button button1 child5">Rechner</button></a>
+        <a href="https://github.com/Barlowed" target="_blank"><button class="button button1 child5">Github</button></a>
+        <button class="button button1 buttondisabled child5">Games</button>
+        <a href="http://www.berufskolleg-geldern.de/startseite.html" target="_blank"><button class="button button1 child5">BK Geldern</button></a>
+
+        </div>
+
+        <!-- U, R & I calculator start -->
+        <h3 class="whiteHeader">URI - Rechner</h3>
+
+        <!-- buttons parent div -->
+  <div class="parent">
+    <!-- 
+    <button class="button button1 child5"onclick="toggle(1)">Spannung berechnen</button>
+    <button class="button button1 child5"onclick="toggle(2)">Widerstand berechnen</button>
+    <button class="button button1 child5"onclick="toggle(3)">Stromstärke berechnen</button>
+    -->
+    <button class="button button1 child5"onclick="toggle(4)">Rechner einblenden</button>
+    <button class="button button1 child5"onclick="toggle(5)">Rechner ausblenden</button>
+
+  </div>
+        <!-- end of div -->
+
+        <!-- U, R & I calculator -->
+        <form class="form border" id="rechnerURI" name="rechnerURI">
+
+            <!-- open new div -->
+            <div class="formDIV" id="rechnerU" name="rechnerU">
+
+            <span class="bold"><label for="inputUr">Widerstand&nbsp;:&nbsp;</label></span>
+            <input id="inputUr" type="number" placeholder="Geben sie einen Wert ein" name="inputUr" />
+
+            <span class="bold"><label for="inputUi">Stromstärke&nbsp;:&nbsp;</label></span>
+            <input id="inputUi" type="number" placeholder="Geben sie einen Wert ein" name="inputUi" />
+
+            <span class="bold"><label for="outputUu"> Spannung&nbsp;:&nbsp;</label></span>
+            <input id="outputUu" type="number" placeholder="Ergebnis" name="outputUu" readonly/>
+
+            <button type="button" onclick="uRechner()">Berechnen</button>
+
+            </div>
+            <!-- end of div -->
+
+            <!-- open new div -->
+            <div class="formDIV" id="rechnerR" name="rechnerR">
+
+            <span class="bold"><label for="inputRu">Spannung&nbsp;:&nbsp;</label></span>
+            <input id="inputRu" type="number" placeholder="Geben sie einen Wert ein" name="inputRu" />
+
+            <span class="bold"><label for="inputRi">Stromstärke&nbsp;:&nbsp;</label></span>
+            <input id="inputRi" type="number" placeholder="Geben sie einen Wert ein" name="inputRi" />
+
+            <span class="bold"><label for="outputRr"> Widerstand&nbsp;:&nbsp;</label></span>
+            <input id="outputRr" type="number" placeholder="Ergebnis" name="outputRr" readonly/>
+
+            <button type="button" onclick="rRechner()">Berechnen</button>
+
+            </div>
+            <!-- end of div -->
+
+            <!-- open new div -->
+            <div class="formDIV" id="rechnerI" name="rechnerI">
+
+            <span class="bold"><label for="inputIu">Spannung&nbsp;:&nbsp;</label></span>
+            <input id="inputIu" type="number" placeholder="Geben sie einen Wert ein" name="inputIu" />
+
+            <span class="bold"><label for="inputIr">Widerstand&nbsp;:&nbsp;</label></span>
+            <input id="inputIr" type="number" placeholder="Geben sie einen Wert ein" name="inputIr" />
+
+            <span class="bold"><label for="outputIi"> Stromstärke&nbsp;:&nbsp;</label></span>
+            <input id="outputIi" type="number" placeholder="Ergebnis" name="outputIi" readonly/>
+
+            <button type="button" onclick="iRechner()">Berechnen</button>
+
+            </div>
+            <!-- end of div -->
+
+        </form>
+
+
+        <h3 class="whiteHeader">Widerstand - Rechner</h3>
+
+    <div class="parent">
+
+        <button class="button button1 child5"onclick="toggleR(1)">Rechner einblenden</button>
+        <button class="button button1 child5"onclick="toggleR(2)">Rechner ausblenden</button>
+
+    </div>
+
+     <form class="form border" id="rechnerR" name="rechnerR">
+
+         <div class="formDIV" id="rechnerReihe" name="rechnerReihe">
+
+            <span class="bold"><label for="inputReiheX">Widerstand1&nbsp;:&nbsp;</label></span>
+            <input id="inputReiheX" type="number" placeholder="Geben sie einen Wert ein" name="inputReiheX" />
+
+            <span class="bold"><label for="inputReiheY">Widerstand2&nbsp;:&nbsp;</label></span>
+            <input id="inputReiheY" type="number" placeholder="Geben sie einen Wert ein" name="inputReiheY" />
+
+            <span class="bold"><label for="outputReihe">Gesamter&nbsp;Widerstand&nbsp;:&nbsp;</label></span>
+            <input id="outputReihe" type="number" placeholder="Ergebnis" name="outputReihe" readonly/>
+
+            <button type="button" onclick="rechnerReihe(1)">Reihe Berechnen</button>
+            <button type="button" onclick="rechnerReihe(2)">Parallel Berechnen</button>
+
+         </div>
+     </form>
+
+    </body>
+    
+</html>

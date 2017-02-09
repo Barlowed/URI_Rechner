@@ -56,6 +56,30 @@ else {
   }
 }
 
+function rechnerReihe(b) {
+    if (b==1) {
+    var reiheX = parseInt (document.getElementById("inputReiheX").value);
+    var reiheY = parseInt (document.getElementById("inputReiheY").value);
+
+    document.getElementById("outputReihe").value = reiheX + reiheY;
+    }
+    else {
+    var reiheX = parseInt (document.getElementById("inputReiheX").value);
+    var reiheY = parseInt (document.getElementById("inputReiheY").value);
+
+    document.getElementById("outputReihe").value = (reiheX * reiheY) / (reiheX + reiheY);
+    }
+}
+
+function toggleR(a) {
+    if (a==1) {
+    document.getElementById("rechnerReihe").style.display="block";
+    }
+    else {
+    document.getElementById("rechnerReihe").style.display="none";
+    }
+}
+
 function randomlinks()
 {
     var random = Math.round(Math.random()*4)
